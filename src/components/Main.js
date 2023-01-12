@@ -67,7 +67,7 @@ h3:hover{
   border-bottom: 3px solid white;
 }
 @media(max-width:50em){
-  left: 1%;
+  left: 0%;
 }
 `
 
@@ -86,6 +86,10 @@ h3:hover{
   transform:scale(1.2);
   transition: all  0.3s ease;
   border-bottom: 3px solid white;
+}
+
+@media(max-width:50em){
+  left: 28%;
 }
 `
 
@@ -106,7 +110,7 @@ h3:hover{
   border-bottom: 3px solid white;
 }
 @media(max-width:50em){
-  left: 49%;
+  left: 48%;
 }
 `
 const Container = styled.div`
@@ -129,10 +133,6 @@ h3:hover{
   transform:scale(1.2);
   transition: all  0.3s ease;
   border-bottom: 3px solid white;
-}
-
-@media(max-width:50em){
-  left: 75%;
 }
 `
 
