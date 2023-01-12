@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import TextScrambler from 'react-scramble-text'
 
 const Container=styled.div`
 -webkit-overflow-scrolling: touch;
@@ -55,8 +54,12 @@ const Intro =()=>{
           <Container>
               <Wrapper>
                   <div>
-                    <h3><TextScrambler phrases={SalR} speed={100} pauseTime={1} repetitions={1}/></h3>
-                      <h2 className='text'><TextScrambler phrases={ph} speed={2} pauseTime={1} repetitions={1}/><TextScrambler phrases={ph2} speed={2} pauseTime={1} repetitions={1}/><TextScrambler phrases={ph3} speed={2} pauseTime={1} repetitions={1}/></h2>
+                    <h3>{SalR}</h3>
+                      <h2 className='text'>
+                        {ph} <br/>
+                        {ph2} <br/>
+                        {ph3} <br/>
+                      </h2>
                   </div>
               </Wrapper>
           </Container>

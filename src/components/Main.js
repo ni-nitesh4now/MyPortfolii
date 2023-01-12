@@ -7,7 +7,6 @@ import SocialIcons from "../subComponents/SocialIcons";
 import Intro from "./Intro";
 import NaturalBg from "./NaturalBg";
 import LogoComponentg from "../subComponents/LogoComponentg";
-import TextScrambler from "react-scramble-text";
 import Preload from "./Preload";
 
 const MainContainer = styled.div`
@@ -197,16 +196,16 @@ const Main = () => {
       {clk ?null: Hide?null:
       <LeftBar click={clk}>
             <Contact target="_blank" to={{pathname:"mailto:niteshmishra13579@gmail.com"}}  >
-                    <h3><TextScrambler phrases={contact} speed={100} pauseTime={1} repetitions={1}/></h3>
+                    <h3>{contact}</h3>
             </Contact>
             <BLOG to="/blog"  >
-                    <h3 ><TextScrambler phrases={blog} speed={100} pauseTime={1} repetitions={1}/></h3>
+                    <h3 >{blog} </h3>
             </BLOG>
             <WORK to="/work"  >
-                    <h3><TextScrambler phrases={work} speed={100} pauseTime={1} repetitions={1}/></h3>
+                    <h3> {work} </h3>
             </WORK>
             <SKILLS to="/skills"  >
-                    <h3><TextScrambler phrases={skill} speed={100} pauseTime={1} repetitions={1}/></h3>
+                    <h3>{skill} </h3>
             </SKILLS>
             </LeftBar>}
     </MainContainer>
