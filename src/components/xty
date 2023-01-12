@@ -1,0 +1,250 @@
+import { motion } from 'framer-motion'
+import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
+import styled, { keyframes } from 'styled-components'
+import LogoComponent from '../subComponents/LogoComponent'
+import SocialIcons from '../subComponents/SocialIcons'
+import Intro from './Intro'
+import NaturalBg from './NaturalBg';
+import Divcom from './divcom';
+
+
+const MainContainer = styled.div`
+background: ${props => props.theme.body};
+background-color:pink;
+width: 100vw;
+height: 100vh;
+overflow:hidden;
+position: relative;
+
+h2,h3,h4,h5,h6{
+  font-family:'Karla', sans-serif ;
+  font-weight:500;
+}
+`
+const WORK = styled(NavLink)`
+color:  ${props => props.click ? 'black':'pink'};
+position: absolute;
+left:10%;
+height:auto;
+width:auto;
+padding:3px;
+border-radius:4px;
+text-decoration: none;
+background:none;
+z-index:1;
+`
+
+const SKILLS = styled(NavLink)`
+color:  ${props => props.click ? 'black':'pink' };
+position: absolute;
+height:auto;
+width:auto;
+padding:3px;
+border-radius:4px;
+left:30%;
+text-decoration: none;
+background:none;
+z-index:1;
+`
+
+const BLOG = styled(NavLink)`
+color:  ${props => props.click ? 'black':'pink' };
+position: absolute;
+left:52%;
+height:auto;
+width:auto;
+padding:3px;
+border-radius:4px;
+
+text-decoration: none;
+background:none;
+z-index:1;
+`
+
+const Container = styled.div`
+padding: 2rem;
+`
+
+const Contact = styled(NavLink)`
+color:  ${props => props.click ? 'black':'pink' };
+position: absolute;
+left:77%;
+height:100%;
+width:25%;
+align-items:center;
+text-align:center;
+justify-content:center;
+padding:auto;
+border-radius:4px;
+text-decoration: none;
+background:yellow;
+z-index:1;
+`
+const rotate = keyframes`
+
+`
+const ivcom=styled.div`
+z-index:1;
+`
+
+
+const DarkDiv = styled.div`
+position: absolute;
+top: 0;
+background-color: #000;
+bottom: 0;
+right: 50%;
+width: ${props => props.click ? '50%' : '0%'};
+height: ${props => props.click ? '100%' : '0%'};
+z-index:1;
+transition: height 0.5s ease, width 1s ease 0.5s;
+`
+
+
+const LeftBar = styled.div`
+position: absolute;
+bottom:10%;
+left:-100%;
+border:none;
+border-radius:40px 40px 40px 40px;
+outline:none;
+background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwNjNhNiIvPjxzdG9wIG9mZnNldD0iMTUlIiBzdG9wLWNvbG9yPSIjMDA3MmMwIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0063a6), color-stop(15%, #0072c0), color-stop(100%, #ffffff));
+background-image: -moz-linear-gradient(top, #0063a6 0%, #0072c0 15%, #ffffff 100%);
+background-image: -webkit-linear-gradient(top, #0063a6 0%, #0072c0 15%, #ffffff 100%);
+background-image: linear-gradient(to bottom, #0063a6 0%, #0072c0 15%, #ffffff 100%);
+display:flex;
+flex-direction:column;
+justify-content:center;
+overflow:hidden;
+align-items:left;
+height:10vh;
+width:80vw;
+z-index:1;
+@media(min-width:50em){
+width:3.5vw;
+}
+`
+
+const Main = () => {
+
+    const [click, setClick] = useState(false);
+
+    const handleClick = () => setClick(!click);
+
+    return (
+        <MainContainer>
+            <DarkDiv   click={click}/>
+            <NaturalBg/>
+            
+            <Divcom />
+            <Container>
+                
+            <LogoComponent theme={click ? 'dark' :'light'}/>
+            <SocialIcons />
+
+            </Container>
+            
+            <LeftBar click={+click}>
+                <Divcom/>
+            <Contact target="_blank" to={{pathname:"mailto:ljain6789@gmail.com"}} click={+click}>
+                <motion.h2
+                initial={{
+                    y:-200,
+                    transition: { type:'spring', duration: 1.5, delay:1}
+                }}
+                animate={{
+                    y:0,
+                    transition: { type:'spring', duration: 1.5, delay:1.2}
+                }}
+                whileHover={{scale: 1.1}}
+                whileTap={{scale: 0.9}}
+                
+                >
+                    Contact
+                </motion.h2>
+            </Contact>
+            <BLOG to="/blog" click={+click}>
+                <motion.h2
+                initial={{
+                    y:-200,
+                    transition: { type:'spring', duration: 1.5, delay:1}
+                }}
+                animate={{
+                    y:0,
+                    transition: { type:'spring', duration: 1.5, delay:1.1}
+                }}
+                 whileHover={{scale: 1.1}}
+                whileTap={{scale: 0.9}}
+                >
+                    Resume
+                </motion.h2>
+            </BLOG>
+            <WORK to="/work" click={+click}>
+                <motion.h2
+                initial={{
+                    y:-200,
+                    transition: { type:'spring', duration: 1.5, delay:1}
+                }}
+                animate={{
+                    y:0,
+                    transition: { type:'spring', duration: 1.5, delay:.9}
+                }}
+                 whileHover={{scale: 1.1}}
+                whileTap={{scale: 0.9}}
+                >
+                    Work
+                </motion.h2>
+            </WORK>
+            <SKILLS to="/skills" click={+click}>
+                <motion.h2
+                initial={{
+                    y:-200,
+                    transition: { type:'spring', duration: 1.5, delay:1}
+                }}
+                animate={{
+                    y:0,
+                    transition: { type:'spring', duration: 1.5, delay:1}
+                }}
+                 whileHover={{scale: 1.1}}
+                whileTap={{scale: 0.9}}
+                >
+                    Skills
+                </motion.h2>
+            </SKILLS>
+            </LeftBar>
+                
+                {click ? <Intro click={click} /> : null }
+        </MainContainer>
+    )
+}
+
+export default Main
+
+
+
+
+
+const Text = [];
+var numbers = [1, 2, 3, 4, 5]; 
+const cont='jjff djjd dkjncjn djskdcnj';
+const Chars="<>/\|][{}=@$^!&#%/"
+const Randch = () =>Chars.charAt(Math.floor(Math.random() * Chars.length));
+const Range = (min, max) =>Math.floor(Math.random() * (max - min)) + min;
+const oldText = oldTex =>{
+	for (let i = 1; i < Range(0,cont.length); i++) {
+        Text.push(Randch());
+	}
+	return Text; 
+}
+console.log(oldText())
+const print=()=>{
+    for(let i=0;i<=oldText.length;i++){
+        console.log(oldText[i+1]);
+    }
+}
+print();
+const newText=()=>{
+
+}

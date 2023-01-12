@@ -1,0 +1,13 @@
+
+ @import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
+
+.logo{
+    width: 24%;
+}
+.wrapper h1{
+    font-weight: 700;
+    position: relative;
+    font-size: 30px;
+    padding: 30px;
+    margin: 0 auto;
+  }
