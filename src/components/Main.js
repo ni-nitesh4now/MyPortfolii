@@ -67,7 +67,7 @@ h3:hover{
   border-bottom: 3px solid white;
 }
 @media(max-width:50em){
-  left: 3%;
+  left: 1%;
 }
 `
 
@@ -153,7 +153,7 @@ height:20vh;
 z-index:1;
 width:40vw;
 @media(max-width:50em){
-  width:60vw;
+  width:65vw;
   left:20%;
 
 }
