@@ -1,9 +1,6 @@
-import { motion } from 'framer-motion'
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
-import {DarkTheme} from '../components/Themes'
-
 import TextScrambler from "react-scramble-text";
 
 

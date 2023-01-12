@@ -1,5 +1,5 @@
 import './sty.css';
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 
 
 import Divcom from "./divcom";

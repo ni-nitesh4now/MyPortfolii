@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/SocialIcons";
 import Intro from "./Intro";
@@ -161,12 +161,7 @@ const contact=[' ','Contact']
 const blog=[' ','Resume']
 const work=[' ','Projects']
 const skill=[' ','Skills']
-const option = {
-  max: 10,
-  reverse:true,
-  perspective: 1000,
-  scale: 1.05,
-}
+
 
 const Main = () => {
   const [showElement,setShowElement] = React.useState(false)
@@ -184,7 +179,7 @@ const Main = () => {
 
     const [clk, setClk] = useState(false);
     const handleClk = () => setClk(!clk);
-    const [clkr, setClkr] = useState(false);
+   
 
   return (
     <MainContainer>

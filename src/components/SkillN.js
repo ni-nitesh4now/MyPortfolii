@@ -126,9 +126,6 @@ display: flex;
 font-size: calc(0.8em);
 `
 
-const Salutation=['Namaskar','Bonjour','Namaste','Salve','Hola','Yasou','Nǐ hǎo','Hi','Hello','Zdravstvuyte']
-
-const SalR=[' ',Salutation[Math.floor(Math.random()*10)]]
 
 const SkillN=()=>{
   return(

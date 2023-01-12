@@ -6,7 +6,6 @@ import {DarkTheme} from './Themes';
 import LogoComponent from '../subComponents/LogoComponent';
 import SocialIcons from '../subComponents/SocialIcons';
 import PowerButton from '../subComponents/PowerButton';
-import ParticleComponent from '../subComponents/ParticleComponent';
 import BigTitle from '../subComponents/BigTitlte'
 
 const Box = styled.div`
@@ -17,36 +16,6 @@ position: relative;
 display: flex;
 justify-content: space-evenly;
 align-items: center;
-`
-
-const Main =  styled.div`
-  border: 2px solid ${(props) => props.theme.text};
-  color: ${(props) => props.theme.text};
-  padding: 1rem;
-  margin: 15vw;
-  height: 55vh;
-  z-index: 3;
-  line-height: 1.5;
-  justify-content: center;
-  align-items: center;
-  font-size: calc(0.6rem + 1vw);
- backdrop-filter: blur(4px);
-  font-family: 'Ubuntu Mono', monospace;
-  font-style: italic;
-`
-
-
-const Title = styled.h2`
-display: flex;
-justify-content: center;
-align-items: center;
-margin-bottom:2rem;
-font-size: calc(1em + 1vw);
-
-}
-&>*:first-child{
-margin-right: 1rem;
-}
 `
 
 const Title2 = styled.h2`
@@ -133,7 +102,6 @@ const MySkillsPage = () => {
             <SocialIcons theme='dark'/>
             <PowerButton />
             <BigTitle text="SKILLS" top="80%" right="30%" />
-            <ParticleComponent theme='dark' />
                 <Container>
                        <Title2>My Skills</Title2>
                            <Skill>

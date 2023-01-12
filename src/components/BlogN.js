@@ -1,8 +1,6 @@
 import "./sty2.css"
 import styled from "styled-components";
 import Me from '../assets/Images/resume.jpg'
-import { motion } from 'framer-motion'
-const MainContainer = styled(motion.div)
 
 const SeasonsContainer = styled.div`
   position: fixed;
@@ -81,19 +79,7 @@ width:100%;
   }
 }
 `
-const container = {
 
-  hidden: {opacity:0},
-  show: {
-    opacity:1,
-
-    transition:{
-      staggerChildren: 0.5,
-      duration: 0.5,
-    }
-  }
-
-}
 const BlogN=()=>{
   return(
     <SeasonsContainer >
