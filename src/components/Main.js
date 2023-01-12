@@ -134,6 +134,9 @@ h3:hover{
   transition: all  0.3s ease;
   border-bottom: 3px solid white;
 }
+@media(max-width:50em){
+  left: 74%;
+}
 `
 
 const LeftBar = styled.div`
