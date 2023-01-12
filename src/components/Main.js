@@ -67,7 +67,7 @@ h3:hover{
   border-bottom: 3px solid white;
 }
 @media(max-width:50em){
-  left: 6%;
+  left: 3%;
 }
 `
 
@@ -131,6 +131,9 @@ h3:hover{
   border-bottom: 3px solid white;
 }
 
+@media(max-width:50em){
+  left: 75%;
+}
 `
 
 const LeftBar = styled.div`
