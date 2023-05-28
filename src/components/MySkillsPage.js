@@ -39,6 +39,7 @@ border: 2px solid ${(props) => props.theme.text};
 color: ${(props) => props.theme.text};
 padding: 2rem;
 margin: 5rem;
+margin-top: 7em;
 z-index: 1;
 line-height: 1.5;
 justify-content: center;
@@ -47,7 +48,11 @@ font-size: calc(0.6rem + 1vw);
 backdrop-filter: blur(4px);
 font-family: 'Ubuntu Mono', monospace;
 font-style: italic;
-height: 80vh;
+height: 60vh;
+overflow: auto; 
+::-webkit-scrollbar {
+    display: none;
+  }
 @media(max-width:50rem){   
 height: 45vh;
 }
